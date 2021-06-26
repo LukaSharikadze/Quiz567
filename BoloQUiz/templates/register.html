@@ -1,0 +1,21 @@
+{%  extends 'base.html' %}
+ {% block title %} Home page {%  endblock %}
+
+{% block content %}
+    <div class="center animate__animated animate__lightSpeedInRight">
+        <p class="centertext white-text font-big animate__animated">Create new account</p>
+        <form method="post" style="width:100%">
+          <div class="form-group animate__animated">
+            <input type="text" name="username" class="form-control" placeholder="Username"><br>
+            <input type="password" name="password" class="form-control"  placeholder="Password"><br>
+            <input type="password" name="repassword" class="form-control"  placeholder="Confirm Password"><br>
+          </div>
+            {% with messages=get_flashed_messages(with_categories=true) %}
+                {% for cat, i in messages %}
+                    <p class="{{cat}}">{{i}}</p>
+                {% endfor %}
+            {% endwith %}
+        <button type="submit" class="btn btn-primary">დარეგისტრირება</button>
+        </form>
+    </div>
+{% endblock %}

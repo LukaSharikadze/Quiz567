@@ -1,0 +1,25 @@
+{%  extends 'base.html' %}
+{% block title %} Adding Page {%  endblock %}
+
+{% block content %}
+    <div class="center">
+        <p class="centertext white-text font-big animate__animated animate__fadeInUp">Add Your Favourite Game</p>
+        <form method="post" style="width:100%">
+          <div class="form-group animate__animated animate__fadeInUpBig">
+            <input type="text" name="name" class="form-control" placeholder="Name"><br>
+            <input type="text" name="dev" class="form-control" placeholder="Developer"><br>
+            <input type="text" name="rating" class="form-control"  placeholder="Rating"><br>
+          </div>
+
+            {% with messages=get_flashed_messages(with_categories=true) %}
+                {% for cat, i in messages %}
+                    <p class="{{cat}}">{{i}}</p>
+                {% endfor %}
+            {% endwith %}
+        <button type="submit" class="btn btn-primary animate__animated animate__fadeInTopRight">Add Game</button>
+        </form>
+    </div>
+
+{% endblock %}
+
+

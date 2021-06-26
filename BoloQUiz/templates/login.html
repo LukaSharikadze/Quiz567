@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="center">
+        <p class="centertext white-text font-big animate__animated animate__bounceIn">Authorize</p>
+
+        <form class="animate__animated  animate__bounceIn" method="post" style="width:100%">
+            <input type="text" name="username" class="form-control mb-3 mt-3" placeholder="username">
+            <input type="password" name="password" class="form-control" placeholder="password">
+            {% with messages=get_flashed_messages(with_categories=true) %}
+                {% for cat, i in messages %}
+                    <p class="{{cat}}">{{i}}</p>
+                {% endfor %}
+            {% endwith %}
+
+            <button type="submit" class="btn btn-success mt-3 animate__animated animate__bounceIn">ავტორიზაცია</button>
+        </form>
+    </div>
+
+
+
+{% endblock %}

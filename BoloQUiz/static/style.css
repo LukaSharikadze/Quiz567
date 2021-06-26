@@ -1,0 +1,47 @@
+.error {
+    color: #FFDA87;
+    font-style: italic;
+}
+
+.info {
+    color: #FF87DA;
+    font-style: inherit;
+}
+
+.back {
+    background-image: url("img/2.jpg");
+}
+
+.white-text {
+    color: white;
+
+}
+
+.font-big {
+    font-size: 25pt;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centertext {
+  text-align:center;
+  vertical-align: middle;
+}
+
+
+.child {
+    margin: auto;
+}
+
+.size {
+    font-size: 30px;
+    color: rgba(94, 183, 201, 0.76);
+}
+

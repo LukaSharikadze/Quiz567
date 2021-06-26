@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="center">
+        <p class="white-text font-big centertext animate__animated animate__slideInLeft">Top Rated Games</p>
+        {% for each in all_game %}
+            <ul>
+                <li class="white-text animate__animated animate__slideInRight">
+                    {{each}}
+                </li>
+            </ul>
+<!--            <p class="white-text">{{each}}</p>-->
+        {% endfor %}
+    </div>
+{% endblock %}
